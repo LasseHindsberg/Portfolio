@@ -1,6 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* #region small elements + body styling */
+/* reset styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+/* adding background */
+body {
+    height: 100%;
+}
+.backgroundImage {
+    /* Photo By Sean Foley on Unsplash 
+    https://www.instagram.com/stfeyes/
+    https://unsplash.com/@_stfeyes */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background2.jpg);  
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+/* #endregion */
+/* #region nav-bar */
+/* styling the navigation bar */
+.header__nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    border: whitesmoke 2px solid;
+    border-top: none;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 8vh;
+    /* Sticky nav styling */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+/* Styling every link element */
+.header__nav a, .about__socials a {
+    padding: .5em 1em;
+    text-decoration: none;
+    color: inherit;
+}
+/* Styling social media icons */
+.header__nav i, .about__socials i {
+    color: inherit;
+}
+
+/* Styling text elements to be bigger */
+.nav__enhancedElements {
+    font-size: 2em;
+    margin-right: 30px;
+}
+/* Giving first child [Portfolio] a larger margin to seperate it */
+.nav__enhancedElements:first-child {
+    margin-right: 2.5%;
+}
+/* #endregion */
+/* #region "front Page" + animated Text */
+.mainPage1 {
+    /* assigning font family to animated text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    /* Displaying flex, and putting content in center */
+    display: flex;
+    justify-content: center;
+    /* giving a height */
+    height: auto;
+    padding-top: 15vh;
+    padding-bottom: 2vh;
+    /* background: lawngreen; */
+}
+
+.mainPage__animatedText {
+    color: whitesmoke;
+    animation: type 2.5s steps(36);
+    overflow: hidden;
+    white-space: nowrap;
+    height: fit-content;
+    width: 31ch;
+}
+
+@keyframes type {
+    0% {
+        width: 0ch;
+        border-right: 4px solid whitesmoke;
+    }
+    99% {
+        width: 30.5ch;
+        border-right: 4px solid whitesmoke;
+    }
+    100% {
+        width: 31ch;
+        border-right: none;
+    }
+}
+/* #endregion */
+/* #region About Me */
+.about,.projects {
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    width: 1400px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "aboutHeader aboutHeader"
+    "aboutContent aboutAvatar";
+}
+
+.about__header {
+    grid-area: aboutHeader;
+}
+
+.about__content {
+    grid-area: aboutContent;
+}
+
+.about__avatar {
+    grid-area: aboutAvatar;
+    margin-left: auto;
+}
+
+.about__link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.about__socials {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* #endregion */
+/* #region Projects */
+.projects {
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "projectsHeader projectsHeader projectsHeader"
+    "projectsContent projectsContent projectsAside";
+}
+
+.projects__header {
+    grid-area: projectsHeader;
+}
+
+.projects__container {
+    grid-area: projectsContent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+/* Form besides projects */
+.projects__aside {
+    grid-area: projectsAside;
+    margin: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: thin solid grey;
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: thin solid;
+    padding: 15px;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+/* #endregion */
+

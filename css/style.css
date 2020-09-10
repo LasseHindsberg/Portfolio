@@ -12,6 +12,7 @@
 /* adding background */
 body {
     height: 100%;
+    font-size: 16px;
 }
 .backgroundImage {
     /* Photo By Sean Foley on Unsplash 
@@ -36,25 +37,30 @@ body {
 /* styling the navigation bar */
 .header__nav {
     display: flex;
-    list-style: none;
     justify-content: space-around;
     align-items: center;
+    
     border: whitesmoke 2px solid;
     border-top: none;
+    
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Poppins', sans-serif;
+    
+    list-style: none;
     min-height: 8vh;
+    text-transform: uppercase;
+
     /* Sticky nav styling */
-    position: fixed;
+
+    /* position: fixed;
     top: 0;
     width: 100%;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-
-
+    overflow: hidden; */
+    
 }
 /* Styling every link element */
-.header__nav a, .about__socials a {
+.header__nav a, .about__socials a{
     padding: .5em 1em;
     text-decoration: none;
     color: inherit;
@@ -65,23 +71,61 @@ body {
 }
 
 /* Styling text elements to be bigger */
-.nav__enhancedElements {
-    font-size: 2em;
+.nav__enhancedElements{
+    letter-spacing: 5px;
+    font-size: 1.375em;
+    font-weight: bold;
     margin-right: 30px;
 }
-/* Giving first child [Portfolio] a larger margin to seperate it */
-.nav__enhancedElements:first-child {
+
+.nav__logo {
+    letter-spacing: 5px;
+    font-size: 1.375em;
+    font-weight: bold;
     margin-right: 2.5%;
+    padding: .5em 1em;
 }
+
+.header__nav a:hover {
+    animation: changeColor 0.5s ease-in-out forwards;
+}
+
+@keyframes changeColor {
+    From {
+        color: inherit;
+    }
+    to {
+        color: purple;
+        scale: 1.5;
+    }        
+}
+
+
+
+/* Styling burger menu */
+
+.nav__burger {
+    display: none;
+}
+.nav__burger div {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
 /* #endregion */
 /* #region "front Page" + animated Text */
 .mainPage1 {
     /* assigning font family to animated text */
     font-family: 'Poppins', sans-serif;
-    font-size: 3em;
+    width: auto;
+    
     /* Displaying flex, and putting content in center */
     display: flex;
     justify-content: center;
+    
+    
     /* giving a height */
     height: auto;
     padding-top: 15vh;
@@ -90,12 +134,12 @@ body {
 }
 
 .mainPage__animatedText {
+    font-size: 2em;
     color: whitesmoke;
     animation: type 2.5s steps(36);
     overflow: hidden;
     white-space: nowrap;
     height: fit-content;
-    width: 31ch;
 }
 
 @keyframes type {
@@ -151,6 +195,7 @@ body {
 }
 
 .about__socials {
+    color: whitesmoke;
     display: flex;
     margin: 0;
     padding: 0;
@@ -198,4 +243,31 @@ fieldset {
     border-bottom-left-radius: 5%;
 }
 /* #endregion */
+/* #region Responsive design */
+@media screen and (max-width:760px) {
+    /* NAV */
+    .nav__links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    /* Removing the push part */
+    .push {
+        margin-left: 0;
+    }
 
+    /* MainAnimation */
+        .mainPage__animatedText {
+            white-space: normal;
+        }
+    /* About */
+
+    /* Projects */
+}
+
+/* #endregion */

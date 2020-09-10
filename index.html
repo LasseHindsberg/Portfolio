@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Lasse Hindsberg">
     <title>Portfolio &middot; Lasse Bruun Hindsberg</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/87c28705a7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,34 +16,31 @@
 
 
         <header>
-            <nav>
-                <ul class="header__nav nav__links">
-                    <li class="nav__logo"><a href="#home">Portfolio</a></li>
+            <nav class="header__nav">
+                <a class="nav__logo" href="#home">Portfolio</a>
+                <ul class=" nav__links">
 
-                    <li class="nav__enhancedElements"><a href="#about">About</a></li>
+                    <li class="nav__enhancedElements"><a href="#!">About</a></li>
 
-                    <li class="nav__enhancedElements"><a href="#projects">Projects</a></li>
+                    <li class="nav__enhancedElements"><a href="#!">Projects</a></li>
 
-                    <li class="push">
+                    <li class="nav__enhancedElements"><a href="#!">Trivia</a></li>
+
+                    <li>
                         <a href="https://twitter.com/Frostyy0w0" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
-                    </li>
-                    <li>
                         <a href="https://www.instagram.com/fr0styy.__/" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
-                    <li>
                         <a href="https://www.linkedin.com/in/lasse-bruun-hindsberg/" target="_blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                    </li>
-                    <li>
                         <a href="https://github.com/LasseHindsberg" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
+
                 </ul>
                         <div class="nav__burger">
                             <div class="line1"></div>
@@ -63,7 +60,7 @@
                 <h2 class="about__header">Who am I?</h2>
                 <section class="about__avatar">
                     <!-- <img src='https://dummyimage.com/350x500/500/fff' alt=''> -->
-                    <img src='img/avatar.jpg' alt=''>
+                    <img src='./assets/img/avatar.jpg' alt=''>
                     
                 </section>
                 <section class="about__content">
@@ -218,7 +215,7 @@
         </div>
         
     </div>
-    <script src="./js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </body>
 
 </html>

@@ -3,19 +3,22 @@ const navSlide = () => {
     const nav = document.querySelector('.nav__links');
     const navLinks = document.querySelectorAll('.nav__links li');
 
-    burger.addEventListener('click', ()=>{
+    burger.addEventListener('click', () => {
+        // toggle nav
         nav.classList.toggle('header__nav--active')
-     // animate links
-     navLinks.forEach((link,index) =>{
-        if(link.style.animation){
-            link.style.animation = ''
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-        };
-        
-    });
 
-   
+        // animate links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = ''
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            };
+
+        });
+        // burger animation
+        burger.classList.toggle('toggle');
+
 
     });
 }

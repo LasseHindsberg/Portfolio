@@ -24,10 +24,6 @@ body {
     background-size: cover;
 }
 
-.push {
-    margin-left: auto;
-}
-
 .center {
     text-align: center;
     vertical-align: middle;
@@ -37,28 +33,26 @@ body {
 /* styling the navigation bar */
 .header__nav {
     display: flex;
-    justify-content: space-around;
+    /* centering logo, so it's on same row as rest of text */
     align-items: center;
-    
-    border: whitesmoke 2px solid;
-    border-top: none;
-    
+
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.8);
-    font-family: 'Poppins', sans-serif;
-    
-    list-style: none;
-    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;    
     text-transform: uppercase;
-
-    /* Sticky nav styling */
-
-    /* position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden; */
-    
+    max-height: 8vh;
 }
+
+.nav__links {
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    list-style: none;
+    width: 100%;
+}
+
 /* Styling every link element */
 .header__nav a, .about__socials a{
     padding: .5em 1em;
@@ -75,29 +69,19 @@ body {
     letter-spacing: 5px;
     font-size: 1.375em;
     font-weight: bold;
-    margin-right: 30px;
+}
+.nav__enhancedElements:last-child{
+    margin-right: auto;
 }
 
 .nav__logo {
     letter-spacing: 5px;
     font-size: 1.375em;
     font-weight: bold;
-    margin-right: 2.5%;
-    padding: .5em 1em;
 }
 
 .header__nav a:hover {
     animation: changeColor 0.5s ease-in-out forwards;
-}
-
-@keyframes changeColor {
-    From {
-        color: inherit;
-    }
-    to {
-        color: purple;
-        scale: 1.5;
-    }        
 }
 
 
@@ -106,6 +90,8 @@ body {
 
 .nav__burger {
     display: none;
+    margin: 25px;
+    cursor: pointer;
 }
 .nav__burger div {
     width: 25px;
@@ -142,20 +128,7 @@ body {
     height: fit-content;
 }
 
-@keyframes type {
-    0% {
-        width: 0ch;
-        border-right: 4px solid whitesmoke;
-    }
-    99% {
-        width: 30.5ch;
-        border-right: 4px solid whitesmoke;
-    }
-    100% {
-        width: 31ch;
-        border-right: none;
-    }
-}
+
 /* #endregion */
 /* #region About Me */
 .about,.projects {
@@ -245,29 +218,95 @@ fieldset {
 /* #endregion */
 /* #region Responsive design */
 @media screen and (max-width:760px) {
+    body {
+        overflow-x:hidden;
+    }
+
     /* NAV */
     .nav__links {
         position: absolute;
         right: 0;
-        height: 100vh;
+        height: 92vh;
+        top: 8vh;
         background-color: rgba(0, 0, 0, 0.8);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: auto;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in
     }
+    .nav__links li {
+        opacity: 0;
+    }
+    .header__nav--active {
+        transform: translateX(0%);
+    }
+    .header__nav {
+        justify-content: space-between;
+    }
+
+    .nav__burger {
+        display: block;
+        float: right;
+    }
+    .nav__enhancedElements {
+        text-decoration: underline;
+    }
+    .nav__logo {
+        text-decoration: underline;
+        font-size: 3em;
+    }
+
     /* Removing the push part */
     .push {
         margin-left: 0;
     }
-
+    
     /* MainAnimation */
-        .mainPage__animatedText {
-            white-space: normal;
-        }
+    
     /* About */
-
+    
     /* Projects */
 }
-
 /* #endregion */
+/* #region Animations */
+
+/* Animation for responsive nav fade in */
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);;
+    }
+}
+
+/* animation for typing header */
+@keyframes type {
+    0% {
+        width: 0ch;
+        border-right: 4px solid whitesmoke;
+    }
+    99% {
+        width: 30.5ch;
+        border-right: 4px solid whitesmoke;
+    }
+    100% {
+        width: 31ch;
+        border-right: none;
+    }
+}
+
+/* animation for color change on link hover */
+@keyframes changeColor {
+    From {
+        color: inherit;
+    }
+    to {
+        color: purple;
+        scale: 1.5;
+    }        
+}

@@ -1,0 +1,83 @@
+/* #region nav-bar */
+/* styling the navigation bar */
+.header__nav {
+    display: flex;
+    /* centering logo, so it's on same row as rest of text */
+    align-items: center;
+
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Poppins', sans-serif;    
+    text-transform: uppercase;
+    max-height: 8vh;
+}
+
+.nav__links {
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    list-style: none;
+    width: 100%;
+}
+
+/* Styling every link element */
+.header__nav a, .about__socials a{
+    padding: .5em 1em;
+    text-decoration: none;
+    color: inherit;
+}
+/* Styling social media icons */
+.header__nav i, .about__socials i {
+    color: inherit;
+}
+
+/* Styling text elements to be bigger */
+.nav__enhancedElements{
+    letter-spacing: 5px;
+    font-size: 1.375em;
+    font-weight: bold;
+}
+.nav__enhancedElements:last-child{
+    margin-right: auto;
+}
+
+.nav__logo {
+    letter-spacing: 5px;
+    font-size: 1.375em;
+    font-weight: bold;
+}
+
+.header__nav a:hover {
+    animation: changeColor 0.5s ease-in-out forwards;
+}
+
+
+
+/* Styling burger menu */
+
+.nav__burger {
+    display: none;
+    margin: 25px;
+    cursor: pointer;
+}
+.nav__burger div {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* #endregion */

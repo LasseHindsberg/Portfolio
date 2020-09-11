@@ -1,7 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Noto+Sans+JP:wght@100&display=swap');
+/* Importing font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Importing style sheets */
+/* Navigation styling */
+@import url("/assets/css/nav.css");
+/* Front page + About me section */
+@import url("/assets/css/frontPage.css");
+/* Projects styling */
+@import url("/assets/css/projects.css");
+/* Trivia styling */
+@import url("/assets/css/trivia.css");
+/* Animations */
+@import url("/assets/css/animations.css");
+/* Responsive design */
+@import url("/assets/css/responsive.css");
+/* -------------------------------------------- */
 
-/* #region small elements + body styling */
 /* reset styling */
 * {
     margin: 0;
@@ -11,10 +24,11 @@
 }
 /* adding background */
 body {
-    height: 100%;
     font-size: 16px;
+    height: 100%;
 }
 .backgroundImage {
+    height: 100vh;
     /* Photo By Sean Foley on Unsplash 
     https://www.instagram.com/stfeyes/
     https://unsplash.com/@_stfeyes */
@@ -23,302 +37,3 @@ body {
     background-position: top;
     background-size: cover;
 }
-
-.center {
-    text-align: center;
-    vertical-align: middle;
-}
-/* #endregion */
-/* #region nav-bar */
-/* styling the navigation bar */
-.header__nav {
-    display: flex;
-    /* centering logo, so it's on same row as rest of text */
-    align-items: center;
-
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-family: 'Poppins', sans-serif;    
-    text-transform: uppercase;
-    max-height: 8vh;
-}
-
-.nav__links {
-    display: flex;
-    height: 8vh;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: uppercase;
-    list-style: none;
-    width: 100%;
-}
-
-/* Styling every link element */
-.header__nav a, .about__socials a{
-    padding: .5em 1em;
-    text-decoration: none;
-    color: inherit;
-}
-/* Styling social media icons */
-.header__nav i, .about__socials i {
-    color: inherit;
-}
-
-/* Styling text elements to be bigger */
-.nav__enhancedElements{
-    letter-spacing: 5px;
-    font-size: 1.375em;
-    font-weight: bold;
-}
-.nav__enhancedElements:last-child{
-    margin-right: auto;
-}
-
-.nav__logo {
-    letter-spacing: 5px;
-    font-size: 1.375em;
-    font-weight: bold;
-}
-
-.header__nav a:hover {
-    animation: changeColor 0.5s ease-in-out forwards;
-}
-
-
-
-/* Styling burger menu */
-
-.nav__burger {
-    display: none;
-    margin: 25px;
-    cursor: pointer;
-}
-.nav__burger div {
-    width: 25px;
-    height: 3px;
-    background-color: whitesmoke;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2 {
-    opacity: 0;
-}
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
-/* #endregion */
-/* #region "front Page" + animated Text */
-.mainPage1 {
-    /* assigning font family to animated text */
-    font-family: 'Poppins', sans-serif;
-    width: auto;
-    
-    /* Displaying flex, and putting content in center */
-    display: flex;
-    justify-content: center;
-    
-    
-    /* giving a height */
-    height: auto;
-    padding-top: 15vh;
-    padding-bottom: 2vh;
-    /* background: lawngreen; */
-}
-
-.mainPage__animatedText {
-    font-size: 2em;
-    color: whitesmoke;
-    animation: type 2.5s steps(36);
-    overflow: hidden;
-    white-space: nowrap;
-    height: fit-content;
-}
-
-
-/* #endregion */
-/* #region About Me */
-.about,.projects {
-    color: whitesmoke;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7));
-    width: 1400px;
-    height: auto;
-    padding: 20px;
-    margin: 0 auto;
-}
-.about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "aboutHeader aboutHeader"
-    "aboutContent aboutAvatar";
-}
-
-.about__header {
-    grid-area: aboutHeader;
-}
-
-.about__content {
-    grid-area: aboutContent;
-}
-
-.about__avatar {
-    grid-area: aboutAvatar;
-    margin-left: auto;
-}
-
-.about__link {
-    color: inherit;
-    text-decoration: underline;
-}
-
-.about__socials {
-    color: whitesmoke;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-/* #endregion */
-/* #region Projects */
-.projects {
-    display: grid;
-    grid-template-columns: 2fr 2fr 0.8fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "projectsHeader projectsHeader projectsHeader"
-    "projectsContent projectsContent projectsAside";
-}
-
-.projects__header {
-    grid-area: projectsHeader;
-}
-
-.projects__container {
-    grid-area: projectsContent;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-}
-
-/* Form besides projects */
-.projects__aside {
-    grid-area: projectsAside;
-    margin: 20px;
-}
-
-input {
-    border: none;
-    border-bottom: thin solid grey;
-    background-color: transparent;
-    margin-bottom: 15px;
-}
-
-fieldset {
-    border: thin solid;
-    padding: 15px;
-    border-top-right-radius: 5%;
-    border-bottom-left-radius: 5%;
-}
-/* #endregion */
-/* #region Responsive design */
-@media screen and (max-width:760px) {
-    body {
-        overflow-x:hidden;
-    }
-
-    /* NAV */
-    .nav__links {
-        position: absolute;
-        right: 0;
-        height: 92vh;
-        top: 8vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in
-    }
-    .nav__links li {
-        opacity: 0;
-    }
-    .header__nav--active {
-        transform: translateX(0%);
-    }
-    .header__nav {
-        justify-content: space-between;
-    }
-
-    .nav__burger {
-        display: block;
-        float: right;
-    }
-    .nav__enhancedElements {
-        text-decoration: underline;
-    }
-    .nav__logo {
-        text-decoration: underline;
-        font-size: 3em;
-    }
-
-    /* Removing the push part */
-    .push {
-        margin-left: 0;
-    }
-    
-    /* MainAnimation */
-    
-    /* About */
-    
-    /* Projects */
-}
-/* #endregion */
-/* #region Animations */
-
-/* Animation for responsive nav fade in */
-@keyframes navLinkFade{
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);;
-    }
-}
-
-/* animation for typing header */
-@keyframes type {
-    0% {
-        width: 0ch;
-        border-right: 4px solid whitesmoke;
-    }
-    99% {
-        width: 30.5ch;
-        border-right: 4px solid whitesmoke;
-    }
-    100% {
-        width: 31ch;
-        border-right: none;
-    }
-}
-
-/* animation for color change on link hover */
-@keyframes changeColor {
-    From {
-        color: inherit;
-    }
-    to {
-        color: purple;
-        scale: 1.5;
-    }        
-}
-/* #endregion */

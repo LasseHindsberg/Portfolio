@@ -1,0 +1,38 @@
+/* Animation for responsive nav fade in */
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);;
+    }
+}
+
+/* animation for typing header */
+@keyframes type {
+    0% {
+        width: 0ch;
+        border-right: 4px solid whitesmoke;
+    }
+    99% {
+        width: 30.5ch;
+        border-right: 4px solid whitesmoke;
+    }
+    100% {
+        width: 31ch;
+        border-right: none;
+    }
+}
+
+/* animation for color change on link hover */
+@keyframes changeColor {
+    From {
+        color: inherit;
+    }
+    to {
+        color: purple;
+        scale: 1.5;
+    }        
+}

@@ -1,0 +1,41 @@
+/* #region Projects */
+.projects {
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "projectsHeader projectsHeader projectsHeader"
+    "projectsContent projectsContent projectsAside";
+}
+
+.projects__header {
+    grid-area: projectsHeader;
+}
+
+.projects__container {
+    grid-area: projectsContent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+/* Form besides projects */
+.projects__aside {
+    grid-area: projectsAside;
+    margin: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: thin solid grey;
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: thin solid;
+    padding: 15px;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+/* #endregion */

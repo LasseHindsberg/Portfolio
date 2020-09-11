@@ -1,0 +1,73 @@
+
+.mainPage1 {
+    /* assigning font family to animated text */
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+    
+    /* Displaying flex, and putting content in center */
+    display: flex;
+    justify-content: center;
+    
+    
+    /* giving a height */
+    height: auto;
+    padding-top: 15vh;
+    padding-bottom: 2vh;
+}
+
+.mainPage__animatedText {
+    font-size: 2em;
+    color: whitesmoke;
+    animation: type 2.5s steps(36);
+    overflow: hidden;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+
+/* About Styling */
+.about,.projects {
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "aboutHeader aboutHeader"
+    "aboutContent aboutAvatar";
+}
+
+.about__header {
+    grid-area: aboutHeader;
+}
+
+.about__content {
+    grid-area: aboutContent;
+}
+
+.about__avatar {
+    grid-area: aboutAvatar;
+    margin-left: auto;
+}
+
+.about__link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.about__socials {
+    color: whitesmoke;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

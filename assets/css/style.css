@@ -20,12 +20,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 /* adding background */
 body {
     font-size: 16px;
     height: 100%;
+    background-color: #131313;
 }
 .backgroundImage {
     height: 100vh;

@@ -1,5 +1,5 @@
 
-.mainPage1 {
+.mainPage {
     /* assigning font family to animated text */
     font-family: 'Poppins', sans-serif;
     width: auto;
@@ -11,7 +11,7 @@
     
     /* giving a height */
     height: auto;
-    padding-top: 15vh;
+    padding-top: 2vh;
     padding-bottom: 2vh;
 }
 
@@ -58,6 +58,9 @@
     grid-area: aboutAvatar;
     margin-left: auto;
 }
+    .avatar__caption {
+        opacity: 0;
+    }
 
 .about__link {
     color: inherit;

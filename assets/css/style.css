@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Importing style sheets */
 /* Navigation styling */
-@import url("/assets/css/nav.css");
+@import url("./nav.css");
 /* Front page + About me section */
-@import url("/assets/css/frontPage.css");
+@import url("./frontPage.css");
 /* Projects styling */
-@import url("/assets/css/projects.css");
+@import url("./projects.css");
 /* Trivia styling */
-@import url("/assets/css/trivia.css");
+@import url("./trivia.css");
 /* Animations */
-@import url("/assets/css/animations.css");
+@import url("./animations.css");
 /* Responsive design */
-@import url("/assets/css/responsive.css");
+@import url("./responsive.css");
 /* -------------------------------------------- */
 
 /* reset styling */
@@ -38,7 +38,3 @@ body {
     background-size: cover;
 }
 
-/* im trynna fix sum */
-.nothing {
-    color: white;
-}

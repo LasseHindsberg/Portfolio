@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Importing style sheets */
 /* Navigation styling */
-@import "./nav.css";
+@import "nav.css";
 /* Front page + About me section */
 @import "frontPage.css";
 /* Projects styling */

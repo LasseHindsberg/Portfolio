@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Importing style sheets */
 /* Navigation styling */
-@import url("./nav.css");
+@import "nav.css";
 /* Front page + About me section */
-@import url("./frontPage.css");
+@import "frontPage.css";
 /* Projects styling */
-@import url("./projects.css");
+@import "projects.css";
 /* Trivia styling */
-@import url("./trivia.css");
+@import "trivia.css";
 /* Animations */
-@import url("./animations.css");
+@import "animations.css";
 /* Responsive design */
-@import url("./responsive.css");
+@import "responsive.css";
 /* -------------------------------------------- */
 
 /* reset styling */

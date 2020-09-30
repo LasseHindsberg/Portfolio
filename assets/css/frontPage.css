@@ -1,4 +1,6 @@
-
+.wrapper {
+    position: relative;
+}
 .mainPage {
     /* assigning font family to animated text */
     font-family: 'Poppins', sans-serif;

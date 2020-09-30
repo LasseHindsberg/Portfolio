@@ -16,8 +16,30 @@
     grid-area: projectsContent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* justify-content: space-around; */
     grid-template-rows: auto;
+    row-gap: 15px;
+    column-gap: 15px;
 }
+/* Content Styling */
+/* content header styling */
+.content__header {
+    font-size: 1.2em;
+    text-align: center;
+
+}
+
+/* Image Figure styling */
+.content__figure {
+    width: 100%;
+    text-align: center;
+}
+.content__links a {
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+
 
 /* Form besides projects */
 .projects__aside {

@@ -2,7 +2,7 @@
 /* styling the navigation bar */
 .header__nav {
     display: flex;
-    /* centering logo, so it's on same row as rest of text */
+    /* centering "logo", so it's on same row as rest of text */
     align-items: center;
 
     color: whitesmoke;

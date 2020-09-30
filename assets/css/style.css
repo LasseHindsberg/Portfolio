@@ -1,40 +1,18 @@
 /* Importing font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Importing style sheets */
+/* General Style sheet */
+@import './general.css';
 /* Navigation styling */
-@import "nav.css";
+@import './nav.css';
 /* Front page + About me section */
-@import "frontPage.css";
+@import './frontPage.css';
 /* Projects styling */
-@import "projects.css";
+@import './projects.css';
 /* Trivia styling */
-@import "trivia.css";
+@import './trivia.css';
 /* Animations */
-@import "animations.css";
+@import './animations.css';
 /* Responsive design */
-@import "responsive.css";
+@import './responsive.css';
 /* -------------------------------------------- */
-
-/* reset styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* adding background */
-body {
-    font-size: 16px;
-    height: 100%;
-    background-color: #131313;
-}
-.backgroundImage {
-    height: 100vh;
-    /* Photo By Sean Foley on Unsplash 
-    https://www.instagram.com/stfeyes/
-    https://unsplash.com/@_stfeyes */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background2.jpg);  
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-

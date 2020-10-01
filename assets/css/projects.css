@@ -60,4 +60,8 @@ fieldset {
     border-top-right-radius: 5%;
     border-bottom-left-radius: 5%;
 }
+
+.mobile {
+    display: none;
+}
 /* #endregion */

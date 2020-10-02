@@ -6,7 +6,8 @@
     
     /* About */
     .about,
-    .projects {
+    .projects,
+    .trivia {
         width: 100%;
         background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));
     }
@@ -67,7 +68,7 @@
             grid-template-rows: auto;
             justify-self: center;
     }
-    .projects__content {
+    .content__figure,.content__header {
         text-align: center;
     }
     .mobile {

@@ -1,0 +1,16 @@
+.trivia__header {
+    font-size: 1.2em;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+.trivia {
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}

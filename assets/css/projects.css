@@ -39,6 +39,11 @@
     font-size: 0.8em;
 }
 
+.content__img {
+    width: 100%;
+    height: auto;
+}
+
 
 
 /* Form besides projects */

@@ -1,0 +1,61 @@
+{
+    "games":[
+        {
+            "name": "League of Legends"
+        },
+        {
+            "name": "Minecraft"
+        },
+        {
+            "name": "Rainbow 6 Siege"
+        },
+        {
+            "name": "Among Us"
+        },
+        {
+            "name": "James Cameron's Avatar: The Game"
+        }
+    ],
+    "food":[
+        {
+            "name": "Sushi"
+        },
+        {
+            "name": "Anything Indian"
+        },
+        {
+            "name": "I honestly dunno"
+        }
+    ],
+    "movies":[
+        {
+            "name": "Vaiana / Moana"
+        },
+        {
+            "name": "Titanic"
+        },
+        {
+            "name": "Death Race"
+        },
+        {
+            "name": "James Cameron's Avatar"
+        }
+    ],
+    "artists":[
+        {
+            "name": "LiL Peep"
+        },
+        {
+            "name": "Hellboy"
+        },
+        {
+            "name": "GOTHANGELSINNER"
+        },
+        {
+            "name": "Gustav Åhr"
+        },
+        {
+            "name": "Trap Goose"
+        }
+    ]
+}
